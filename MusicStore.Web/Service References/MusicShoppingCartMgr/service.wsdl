@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ShoppingCartServiceManager" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/MusicStore.Core" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="iShoppingCart_CreateOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrder" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_CreateOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_AddToCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddToCart" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_AddToCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddToCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_GetCartItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCartItems" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_GetCartItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCartItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_GetTotal_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotal" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_GetTotal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalResponse" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_GetAlbum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlbum" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_GetAlbum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlbumResponse" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_RemoveFromCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFromCart" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_RemoveFromCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveFromCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_GetCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCount" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_GetCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_MigrateCart_InputMessage">
+    <wsdl:part name="parameters" element="tns:MigrateCart" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_MigrateCart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MigrateCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_AddOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrder" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_AddOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_IsValid_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsValid" />
+  </wsdl:message>
+  <wsdl:message name="iShoppingCart_IsValid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsValidResponse" />
+  </wsdl:message>
+  <wsdl:portType name="iShoppingCart">
+    <wsdl:operation name="CreateOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/iShoppingCart/CreateOrder" message="tns:iShoppingCart_CreateOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/iShoppingCart/CreateOrderResponse" message="tns:iShoppingCart_CreateOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddToCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/iShoppingCart/AddToCart" message="tns:iShoppingCart_AddToCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/iShoppingCart/AddToCartResponse" message="tns:iShoppingCart_AddToCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCartItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/iShoppingCart/GetCartItems" message="tns:iShoppingCart_GetCartItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/iShoppingCart/GetCartItemsResponse" message="tns:iShoppingCart_GetCartItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotal">
+      <wsdl:input wsaw:Action="http://tempuri.org/iShoppingCart/GetTotal" message="tns:iShoppingCart_GetTotal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/iShoppingCart/GetTotalResponse" message="tns:iShoppingCart_GetTotal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlbum">
+      <wsdl:input wsaw:Action="http://tempuri.org/iShoppingCart/GetAlbum" message="tns:iShoppingCart_GetAlbum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/iShoppingCart/GetAlbumResponse" message="tns:iShoppingCart_GetAlbum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFromCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/iShoppingCart/RemoveFromCart" message="tns:iShoppingCart_RemoveFromCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/iShoppingCart/RemoveFromCartResponse" message="tns:iShoppingCart_RemoveFromCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/iShoppingCart/GetCount" message="tns:iShoppingCart_GetCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/iShoppingCart/GetCountResponse" message="tns:iShoppingCart_GetCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MigrateCart">
+      <wsdl:input wsaw:Action="http://tempuri.org/iShoppingCart/MigrateCart" message="tns:iShoppingCart_MigrateCart_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/iShoppingCart/MigrateCartResponse" message="tns:iShoppingCart_MigrateCart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/iShoppingCart/AddOrder" message="tns:iShoppingCart_AddOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/iShoppingCart/AddOrderResponse" message="tns:iShoppingCart_AddOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsValid">
+      <wsdl:input wsaw:Action="http://tempuri.org/iShoppingCart/IsValid" message="tns:iShoppingCart_IsValid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/iShoppingCart/IsValidResponse" message="tns:iShoppingCart_IsValid_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_iShoppingCart" type="tns:iShoppingCart">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateOrder">
+      <soap:operation soapAction="http://tempuri.org/iShoppingCart/CreateOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddToCart">
+      <soap:operation soapAction="http://tempuri.org/iShoppingCart/AddToCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCartItems">
+      <soap:operation soapAction="http://tempuri.org/iShoppingCart/GetCartItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotal">
+      <soap:operation soapAction="http://tempuri.org/iShoppingCart/GetTotal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlbum">
+      <soap:operation soapAction="http://tempuri.org/iShoppingCart/GetAlbum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveFromCart">
+      <soap:operation soapAction="http://tempuri.org/iShoppingCart/RemoveFromCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCount">
+      <soap:operation soapAction="http://tempuri.org/iShoppingCart/GetCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MigrateCart">
+      <soap:operation soapAction="http://tempuri.org/iShoppingCart/MigrateCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrder">
+      <soap:operation soapAction="http://tempuri.org/iShoppingCart/AddOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValid">
+      <soap:operation soapAction="http://tempuri.org/iShoppingCart/IsValid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ShoppingCartServiceManager">
+    <wsdl:port name="BasicHttpBinding_iShoppingCart" binding="tns:BasicHttpBinding_iShoppingCart">
+      <soap:address location="http://localhost:8733/MusicStore.Services/SvcShopCart/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

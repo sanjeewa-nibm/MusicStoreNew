@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AlbumServiceManager" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/MusicStore.Core" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="iAlbum_BrowseAlbum_InputMessage">
+    <wsdl:part name="parameters" element="tns:BrowseAlbum" />
+  </wsdl:message>
+  <wsdl:message name="iAlbum_BrowseAlbum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BrowseAlbumResponse" />
+  </wsdl:message>
+  <wsdl:message name="iAlbum_GetAllAlbumList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAlbumList" />
+  </wsdl:message>
+  <wsdl:message name="iAlbum_GetAllAlbumList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAlbumListResponse" />
+  </wsdl:message>
+  <wsdl:message name="iAlbum_GetTopSellingAlbums_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopSellingAlbums" />
+  </wsdl:message>
+  <wsdl:message name="iAlbum_GetTopSellingAlbums_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopSellingAlbumsResponse" />
+  </wsdl:message>
+  <wsdl:message name="iAlbum_GetAllStoreMangerList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStoreMangerList" />
+  </wsdl:message>
+  <wsdl:message name="iAlbum_GetAllStoreMangerList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStoreMangerListResponse" />
+  </wsdl:message>
+  <wsdl:message name="iAlbum_CreateAlbum_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAlbum" />
+  </wsdl:message>
+  <wsdl:message name="iAlbum_CreateAlbum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAlbumResponse" />
+  </wsdl:message>
+  <wsdl:message name="iAlbum_EditAlbum_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditAlbum" />
+  </wsdl:message>
+  <wsdl:message name="iAlbum_EditAlbum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditAlbumResponse" />
+  </wsdl:message>
+  <wsdl:message name="iAlbum_FindAlbum_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAlbum" />
+  </wsdl:message>
+  <wsdl:message name="iAlbum_FindAlbum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAlbumResponse" />
+  </wsdl:message>
+  <wsdl:portType name="iAlbum">
+    <wsdl:operation name="BrowseAlbum">
+      <wsdl:input wsaw:Action="http://tempuri.org/iAlbum/BrowseAlbum" message="tns:iAlbum_BrowseAlbum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/iAlbum/BrowseAlbumResponse" message="tns:iAlbum_BrowseAlbum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAlbumList">
+      <wsdl:input wsaw:Action="http://tempuri.org/iAlbum/GetAllAlbumList" message="tns:iAlbum_GetAllAlbumList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/iAlbum/GetAllAlbumListResponse" message="tns:iAlbum_GetAllAlbumList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopSellingAlbums">
+      <wsdl:input wsaw:Action="http://tempuri.org/iAlbum/GetTopSellingAlbums" message="tns:iAlbum_GetTopSellingAlbums_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/iAlbum/GetTopSellingAlbumsResponse" message="tns:iAlbum_GetTopSellingAlbums_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStoreMangerList">
+      <wsdl:input wsaw:Action="http://tempuri.org/iAlbum/GetAllStoreMangerList" message="tns:iAlbum_GetAllStoreMangerList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/iAlbum/GetAllStoreMangerListResponse" message="tns:iAlbum_GetAllStoreMangerList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAlbum">
+      <wsdl:input wsaw:Action="http://tempuri.org/iAlbum/CreateAlbum" message="tns:iAlbum_CreateAlbum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/iAlbum/CreateAlbumResponse" message="tns:iAlbum_CreateAlbum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditAlbum">
+      <wsdl:input wsaw:Action="http://tempuri.org/iAlbum/EditAlbum" message="tns:iAlbum_EditAlbum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/iAlbum/EditAlbumResponse" message="tns:iAlbum_EditAlbum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAlbum">
+      <wsdl:input wsaw:Action="http://tempuri.org/iAlbum/FindAlbum" message="tns:iAlbum_FindAlbum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/iAlbum/FindAlbumResponse" message="tns:iAlbum_FindAlbum_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_iAlbum" type="tns:iAlbum">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BrowseAlbum">
+      <soap:operation soapAction="http://tempuri.org/iAlbum/BrowseAlbum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAlbumList">
+      <soap:operation soapAction="http://tempuri.org/iAlbum/GetAllAlbumList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopSellingAlbums">
+      <soap:operation soapAction="http://tempuri.org/iAlbum/GetTopSellingAlbums" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStoreMangerList">
+      <soap:operation soapAction="http://tempuri.org/iAlbum/GetAllStoreMangerList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAlbum">
+      <soap:operation soapAction="http://tempuri.org/iAlbum/CreateAlbum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditAlbum">
+      <soap:operation soapAction="http://tempuri.org/iAlbum/EditAlbum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAlbum">
+      <soap:operation soapAction="http://tempuri.org/iAlbum/FindAlbum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AlbumServiceManager">
+    <wsdl:port name="BasicHttpBinding_iAlbum" binding="tns:BasicHttpBinding_iAlbum">
+      <soap:address location="http://localhost:8733/MusicStore.Services/SvcAlbum/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

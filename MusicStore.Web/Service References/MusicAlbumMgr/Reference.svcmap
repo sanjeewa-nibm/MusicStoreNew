@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4d16055b-4a9b-4bd6-b2a4-79a6318e4411" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/MusicStore.Services/SvcAlbum/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="ae8a80ed-113c-448f-9770-7c2babf71cbc" SourceId="1" SourceUrl="http://localhost:8733/MusicStore.Services/SvcAlbum/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="1188bf8f-1cf6-401a-b542-4c45b59faa56" SourceId="1" SourceUrl="http://localhost:8733/MusicStore.Services/SvcAlbum/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="c0c74832-a799-40f7-ba62-14b3cc1d0730" SourceId="1" SourceUrl="http://localhost:8733/MusicStore.Services/SvcAlbum/mex" />
+    <MetadataFile FileName="MusicStore.Core.xsd" MetadataType="Schema" ID="e9d01d33-90fe-47fa-8ed9-7d088be84603" SourceId="1" SourceUrl="http://localhost:8733/MusicStore.Services/SvcAlbum/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

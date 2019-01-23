@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -10,6 +10,7 @@ namespace MusicStore.Data
 {
     public class MusicStoreEntities : DbContext
     {
+//
         public MusicStoreEntities()
             : base("MusicStoreEntities")
         {

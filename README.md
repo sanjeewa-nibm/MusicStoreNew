@@ -10,7 +10,7 @@ This project was done by Layered Architecture  will ASP.NET MVC,WCF,Entity Frame
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License 
 
 ## Acknowledgments
 
